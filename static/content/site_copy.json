@@ -1,0 +1,331 @@
+{
+"meta": {
+"brand_name": "TechDenX",
+"domain": "techdenx.com",
+"contact_email": "support@techdenx.com",
+"location": "Boston, MA",
+"stripe_payment_link_url": "https://buy.stripe.com/aFa9AS2OS3oF8Yr0qNgYU01",
+"intake_form_url": "https://forms.gle/d2XFYAgSMS6Gs2K78",
+"title_suffix": "Email Authentication + Bulk-Sender Compliance Setup",
+"seo_description": "48-hour sprint to set up or fix SPF, DKIM, and DMARC and confirm bulk-sender compliance basics for legitimate senders. Includes objective pass/fail proof and a concise report. No inbox placement guarantees."
+},
+"nav": [
+{ "label": "Home", "href": "/" },
+{ "label": "Services", "href": "/services" },
+{ "label": "Pricing", "href": "/pricing" },
+{ "label": "FAQ", "href": "/faq" },
+{ "label": "About", "href": "/about" },
+{ "label": "Contact", "href": "/contact" }
+],
+"home": {
+"hero_headline": "Fix SPF, DKIM, and DMARC in 48 hours — with proof.",
+"hero_subheadline": "A fast \"compliance sprint\" for legitimate senders: set up or repair email authentication and confirm bulk-sender requirements like unsubscribe handling. You get clear pass/fail checks, screenshots, and a short report. No inbox placement promises.",
+"primary_cta_label": "Pay $199 to Start",
+"primary_cta_href": "{{STRIPE_PAYMENT_LINK_URL}}",
+"sections": [
+{
+"title": "What you get",
+"bullets": [
+"SPF, DKIM, and DMARC set up or fixed for your sending domain(s)",
+"Alignment and pass/fail verification (objective results)",
+"Bulk-sender compliance basics checked: unsubscribe + sender identity requirements (as applicable)",
+"Screenshots and test evidence you can save/share",
+"A concise 1–2 page report with final DNS records and what changed"
+]
+},
+{
+"title": "Who this is for",
+"bullets": [
+"Newsletter operators using opt-in lists",
+"Email marketing agencies managing client domains",
+"Small SaaS and membership businesses sending product + billing email",
+"Ecommerce brands sending receipts and customer updates",
+"Teams that want it done quickly without learning DNS standards"
+]
+},
+{
+"title": "What this is not",
+"bullets": [
+"No deliverability or inbox placement guarantees",
+"No \"cold blast\" scaling, list buying, or gray-area tactics",
+"No spam or illicit email practices (we refuse these requests)"
+]
+},
+{
+"title": "How it works",
+"bullets": [
+"You pay and we'll follow up within 2 hours",
+"We review your current setup and identify what’s missing/broken",
+"We publish/fix DNS records (SPF/DKIM/DMARC) with your approval",
+"We verify pass/fail status and provide proof + a report"
+]
+}
+]
+},
+"services": {
+"headline": "48-hour Email Authentication + Bulk-Sender Compliance Setup",
+"sections": [
+{
+"title": "The goal",
+"paragraphs": [
+"Email providers increasingly block, filter, or distrust domains that don’t authenticate email properly. This sprint gets your domain authentication set up correctly and checks key bulk-sender requirements that apply to legitimate marketing email.",
+"You’ll receive objective evidence (pass/fail checks and screenshots). We do not promise inbox placement."
+],
+"bullets": [
+"Set up or fix SPF (single, valid record with only legitimate senders)",
+"Enable and publish DKIM for your sending platform(s)",
+"Publish DMARC (start with monitoring unless you request enforcement)",
+"Validate authentication results: SPF pass, DKIM pass, DMARC pass (and alignment where applicable)",
+"Confirm unsubscribe handling for marketing email (as applicable)",
+"Provide a clear summary of what changed and the final DNS records"
+]
+},
+{
+"title": "Proof-based deliverables",
+"paragraphs": [
+"You get documentation you can keep: record values, verification results, and screenshots. This is designed to be objective and auditable."
+],
+"bullets": [
+"Before/after status snapshot",
+"DMARC policy details documented",
+"Header-based evidence from test messages (when available)",
+"Rollback notes (what to revert if needed)"
+]
+},
+{
+"title": "Strict boundaries",
+"paragraphs": [
+"We only work with legitimate senders: opt-in newsletters, customers, users, and lawful communications. We do not support spam or illicit email practices."
+],
+"bullets": [
+"No list buying or scraping",
+"No deceptive sender identity",
+"No guidance for evading spam filters",
+"We may refuse service if the use case appears abusive or non-compliant"
+]
+}
+]
+},
+"pricing": {
+"headline": "Simple flat pricing",
+"tiers": [
+{
+"name": "Compliance Sprint",
+"price": "$199 (one-time)",
+"who_its_for": "Legitimate senders who want SPF/DKIM/DMARC set up correctly and bulk-sender compliance basics confirmed—fast.",
+"includes": [
+"SPF setup/fix (single record, validated)",
+"DKIM setup/enablement for your sending platform(s)",
+"DMARC record published (monitoring by default)",
+"Objective verification (pass/fail) + screenshots",
+"Concise report with final DNS records and changes",
+"Basic unsubscribe compliance check for marketing mail (as applicable)",
+"48-hour turnaround after access is granted"
+],
+"cta_label": "Pay $199",
+"cta_href": "{{STRIPE_PAYMENT_LINK_URL}}"
+}
+],
+"fine_print": [
+"Turnaround is 48 hours after you provide required access (see Services/FAQ). DNS propagation can take additional time depending on your provider, but we’ll provide proof as soon as checks pass.",
+"This service provides authentication + compliance setup with objective verification. It does not include deliverability consulting or inbox placement guarantees.",
+"We do not support spam or illicit email practices. Requests that involve purchased lists, scraping, or deceptive sending may be refused and refunded if no work has started."
+]
+},
+"faq": {
+"headline": "FAQ",
+"items": [
+{
+"q": "What exactly do you set up?",
+"a": "We set up or fix SPF, DKIM, and DMARC for your sending domain(s) and verify pass/fail results. We also check basic bulk-sender compliance requirements related to unsubscribe handling for legitimate marketing mail (as applicable)."
+},
+{
+"q": "Do you guarantee inbox placement?",
+"a": "No. We provide authentication + compliance setup and objective verification (pass/fail checks and proof). Inbox placement depends on many factors outside authentication (content, reputation, list quality, recipient behavior, etc.)."
+},
+{
+"q": "What counts as \"48 hours\"?",
+"a": "48 hours starts once you provide required access (DNS access or the ability to publish DNS records) and submit your sending details."
+},
+{
+"q": "What access do you need?",
+"a": "Best: delegated DNS access to your DNS provider. Next best: you add the records while we guide you over chat or screenshare. Worst: you forward screenshots and we provide record values only (slower and more error-prone). We never ask for email account passwords."
+},
+{
+"q": "Which email platforms do you support?",
+"a": "Most major platforms that use standard SPF/DKIM/DMARC workflows. You'll list your sending provider(s) so we can generate correct records and enable DKIM where needed."
+},
+{
+"q": "Will this fix spoofing?",
+"a": "Proper authentication and DMARC reduce spoofing risk and make it harder for attackers to impersonate your domain, but no setup can eliminate all abuse. We will document your DMARC policy and recommend a safe starting policy (monitoring by default)."
+},
+{
+"q": "Can you set DMARC to quarantine or reject?",
+"a": "Yes, if you request it and understand the tradeoffs. By default we start with monitoring (p=none) to avoid unintended mail disruptions, then you can move to enforcement after monitoring results."
+},
+{
+"q": "Do you handle multiple domains?",
+"a": "This sprint covers one primary sending domain. If you have additional sending domains/subdomains, we can usually handle them, but it may require additional scope depending on complexity."
+},
+{
+"q": "What if my DNS host is hard to use?",
+"a": "We’ll provide exact record values and help you place them correctly. If your provider supports delegated access, that’s fastest. If not, we can walk you through it step-by-step."
+},
+{
+"q": "Do you work with cold outreach or purchased lists?",
+"a": "No. We do not support spam or illicit email practices, including purchased/scraped lists or tactics meant to bypass provider policies. We only work with legitimate senders (opt-in newsletters, customers/users, and lawful communications)."
+}
+]
+},
+"about": {
+"headline": "About {{BRAND_NAME}}",
+"paragraphs": [
+"{{BRAND_NAME}} provides a focused, proof-based setup service for email authentication and bulk-sender compliance basics. The goal is simple: make sure your domain is configured correctly (SPF/DKIM/DMARC) and that your marketing mail meets unsubscribe expectations where applicable.",
+"This is a narrow, implementation-first sprint — not ongoing deliverability consulting. You get objective pass/fail verification and clean documentation you can keep."
+],
+"bullets": [
+"Fast turnaround: 48 hours after access",
+"Objective results: pass/fail checks with proof",
+"Clear boundaries: legitimate senders only",
+"No passwords required; DNS access preferred"
+]
+},
+"contact": {
+"headline": "Contact",
+"paragraphs": [
+"Questions before you buy? Send a message and include your sending domain and the email platform you use (if you know it).",
+"Already paid? Check your email for next steps, or contact us if you need help."
+],
+"contact_blocks": [
+{ "label": "Email", "value": "{{CONTACT_EMAIL}}" },
+{ "label": "Location", "value": "Boston, MA" }
+]
+},
+"privacy": {
+"headline": "Privacy Policy",
+"sections": [
+{
+"title": "What we collect",
+"paragraphs": [
+"We collect information you submit through our intake form and communications, such as your name, contact details, sending domain(s), email sending platform(s), and DNS-related configuration details needed to perform the service.",
+"We may collect payment confirmation and basic billing details via our payment processor. We do not store full payment card numbers on our servers."
+]
+},
+{
+"title": "How we use information",
+"paragraphs": [
+"We use your information to deliver the requested service, communicate with you, and provide documentation of work performed (such as DNS record values and verification results).",
+"We do not sell your personal information."
+]
+},
+{
+"title": "Access and credentials",
+"paragraphs": [
+"We prefer delegated DNS access or supervised changes. We do not ask for passwords to your email accounts. If you choose to provide temporary access to DNS tools, you are responsible for revoking it after work is completed."
+]
+},
+{
+"title": "Data retention",
+"paragraphs": [
+"We retain project notes and reports for a reasonable period to support follow-up questions and proof of completion, unless you request deletion where feasible."
+]
+},
+{
+"title": "Third-party services",
+"paragraphs": [
+"We use third-party services for payments and forms. Their handling of data is governed by their own privacy policies."
+]
+},
+{
+"title": "Contact",
+"paragraphs": [
+"For privacy questions, contact us at {{CONTACT_EMAIL}}."
+]
+}
+]
+},
+"terms": {
+"headline": "Terms of Service",
+"sections": [
+{
+"title": "Service description",
+"paragraphs": [
+"{{BRAND_NAME}} provides a one-time \"Email Authentication + Bulk-Sender Compliance Setup\" service. The service includes configuring or correcting SPF, DKIM, and DMARC records for a sending domain and providing objective verification evidence and documentation.",
+"We do not provide deliverability consulting and do not guarantee inbox placement, open rates, revenue outcomes, or performance improvements."
+]
+},
+{
+"title": "Eligibility and acceptable use",
+"paragraphs": [
+"You must be a legitimate sender with a lawful basis to email recipients (e.g., opted-in subscribers, customers, or users).",
+"We do not support spam or illicit email practices. We may refuse or terminate service if we reasonably believe the use case involves purchased/scraped lists, deception, or policy-violating behavior."
+]
+},
+{
+"title": "Client responsibilities",
+"paragraphs": [
+"You are responsible for providing accurate information in the intake form and for approving changes to your DNS configuration.",
+"You are responsible for maintaining your email list practices, content, and sending behavior. Authentication does not override provider policies or recipient preferences."
+]
+},
+{
+"title": "Access and authorization",
+"paragraphs": [
+"You authorize us to make DNS changes only as required to perform the service. If you provide delegated access, you agree to revoke it after completion if desired.",
+"We do not request passwords to your email accounts. If access is provided, it should be via delegated/limited permissions where possible."
+]
+},
+{
+"title": "Limitations",
+"paragraphs": [
+"DNS propagation times and third-party platform behavior can affect verification timing. We will provide proof as soon as checks indicate passing status, but we cannot control external systems.",
+"Complex setups (multiple domains, multiple senders, legacy records, or unusual DNS limitations) may require additional time or scope; we will communicate if scope changes are needed."
+]
+},
+{
+"title": "Liability",
+"paragraphs": [
+"To the maximum extent permitted by law, {{BRAND_NAME}} is not liable for indirect, incidental, special, consequential, or punitive damages related to your email sending, deliverability, or business outcomes.",
+"Our total liability for claims related to the service is limited to the amount you paid for the service."
+]
+},
+{
+"title": "Contact",
+"paragraphs": [
+"Questions about these terms can be sent to {{CONTACT_EMAIL}}."
+]
+}
+]
+},
+"refund": {
+"headline": "Refund Policy",
+"sections": [
+{
+"title": "Objective refund trigger",
+"paragraphs": [
+"If, after implementation, your domain authentication still fails (SPF/DKIM/DMARC) for the sending domain we configured — and the failure is due to configuration within our scope — you are eligible for a full refund.",
+"To evaluate this, we use objective pass/fail checks from standard verification tools and/or message headers from test sends, depending on what’s available for your setup."
+]
+},
+{
+"title": "What’s required to qualify",
+"paragraphs": [
+"You must provide the required access and accurate sending platform information, and you must not modify the DNS records we set during the verification window.",
+"If failures are caused by third-party platform limitations, missing access, inaccurate intake information, or later changes you or another party makes to DNS, the refund trigger may not apply."
+]
+},
+{
+"title": "Non-supported use cases",
+"paragraphs": [
+"We do not support spam or illicit email practices. If we determine the request involves purchased/scraped lists, deception, or policy-violating sending, we may refuse service. If no work has started, we will refund the payment. If work has started, we will determine an appropriate refund based on work completed."
+]
+},
+{
+"title": "How to request a refund",
+"paragraphs": [
+"Email {{CONTACT_EMAIL}} with your domain, the date of purchase, and the verification evidence showing failed authentication. We will respond with next steps and a determination."
+]
+}
+]
+}
+}

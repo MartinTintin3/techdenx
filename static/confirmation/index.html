@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Payment confirmed. Next steps for your 48-hour email authentication setup.">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Payment Received — Next Steps | Email Authentication + Bulk-Sender Compliance Setup</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body class="loading">
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="brand">Loading...</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/services/">Services</a></li>
+          <li><a href="/pricing/">Pricing</a></li>
+          <li><a href="/faq/">FAQ</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" style="padding-bottom: 2rem;">
+      <div class="container">
+        <div class="confirmation-header">
+          <span class="confirmation-check" aria-hidden="true">✓</span>
+          <h1>Payment received — Next steps</h1>
+        </div>
+        <p class="hero-subtitle">We received your payment for the <strong>48-hour Email Auth Compliance Sprint</strong>. Follow the steps below to get started.</p>
+        
+        <!-- Reference info from URL params (populated by JS) -->
+        <div id="reference-info" class="reference-info" style="display: none;">
+          <p id="reference-text"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="confirmation-steps">
+          
+          <!-- Step 1: Intake Form -->
+          <div class="confirmation-step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h2>Complete the Intake Form</h2>
+              <p>This is required to start the 48-hour clock. Without the intake form, we can't begin work.</p>
+              <a href="#" id="intake-form-cta" class="btn btn-primary btn-lg mt-2">Complete Intake Form →</a>
+            </div>
+          </div>
+
+          <!-- Step 2: Timeline -->
+          <div class="confirmation-step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h2>What happens next</h2>
+              <ul class="step-list">
+                <li><strong>48 hours starts</strong> once you submit the intake form and provide DNS access (or confirm your access method).</li>
+                <li>We review your current SPF, DKIM, and DMARC configuration.</li>
+                <li>We set up or fix records as needed, with your approval for any changes.</li>
+                <li>We verify pass/fail status using standard authentication checks.</li>
+              </ul>
+              <h3>What you'll receive:</h3>
+              <ul class="step-list">
+                <li>Proof screenshots of authentication checks (before/after)</li>
+                <li>A summary of final DNS records and what changed</li>
+                <li>Rollback notes (what to revert if needed)</li>
+                <li>Basic unsubscribe compliance notes (for marketing mail)</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Step 3: What to prepare -->
+          <div class="confirmation-step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h2>What to prepare</h2>
+              <p>Have this information ready for the intake form:</p>
+              <ul class="step-list checklist">
+                <li><strong>Domain name(s)</strong> — The domain(s) you send email from</li>
+                <li><strong>DNS host</strong> — Where your DNS is managed (e.g., Cloudflare, GoDaddy, Route53, Namecheap)</li>
+                <li><strong>Email platforms</strong> — All services that send email on your behalf (e.g., Google Workspace, Mailchimp, Postmark, HubSpot, your app's transactional sender)</li>
+                <li><strong>DNS access method</strong> — Your preference:
+                  <ul>
+                    <li><em>Best:</em> Delegated/limited DNS access (you add us temporarily)</li>
+                    <li><em>Good:</em> Screen-share where you make changes with our guidance</li>
+                    <li><em>Avoid:</em> Sharing passwords (we don't recommend this)</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Communication -->
+          <div class="confirmation-step">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h2>Communication</h2>
+              <p>Updates will be sent to the email you provided during checkout.</p>
+              <ul class="step-list">
+                <li><strong>Support email:</strong> <a href="mailto:support@techdenx.com" id="support-email-link">support@techdenx.com</a></li>
+                <li><strong>Response time:</strong> Within 1 business day (often faster)</li>
+                <li>If you have questions or need to update your intake info, just reply to any email from us.</li>
+              </ul>
+              <p id="client-email-notice" style="display: none;"></p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Important Notes -->
+        <div class="notice-box notice-box-warning mt-3">
+          <h3 style="margin-top: 0;">Important notes</h3>
+          <ul class="mb-0">
+            <li><strong>No inbox placement guarantee:</strong> This service provides email authentication setup (SPF/DKIM/DMARC) and objective verification. We do not promise or guarantee inbox placement, open rates, or deliverability improvements.</li>
+            <li><strong>Legitimate senders only:</strong> By proceeding, you confirm that you are a legitimate sender (opt-in subscribers, customers, or users with lawful basis to email). We do not support spam or illicit email practices.</li>
+            <li><strong>Bought by mistake?</strong> If you need a refund before work begins, email us immediately. See our <a href="/refund/">Refund Policy</a> for details.</li>
+          </ul>
+        </div>
+
+        <!-- Final CTA -->
+        <div class="text-center mt-3">
+          <p class="text-muted mb-2">Ready? Start by completing the intake form:</p>
+          <a href="#" id="intake-form-cta-bottom" class="btn btn-primary btn-lg">Complete Intake Form →</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Company Name</h3>
+          <p>Located in Boston, MA</p>
+          <p><a href="mailto:contact@example.com">contact@example.com</a></p>
+        </div>
+        <div class="footer-links">
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/services/">Services</a></li>
+            <li><a href="/pricing/">Pricing</a></li>
+            <li><a href="/faq/">FAQ</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/privacy/">Privacy Policy</a></li>
+            <li><a href="/terms/">Terms of Service</a></li>
+            <li><a href="/refund/">Refund Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-notice">
+        <strong>Notice:</strong> We do not support spam or illicit email practices. We only work with legitimate senders.
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2026 Company Name. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/site.js"></script>
+</body>
+</html>
