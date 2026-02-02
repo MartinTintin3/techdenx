@@ -174,6 +174,14 @@
 {
 "q": "Do you work with cold outreach or purchased lists?",
 "a": "No. We do not support spam or illicit email practices, including purchased/scraped lists or tactics meant to bypass provider policies. We only work with legitimate senders (opt-in newsletters, customers/users, and lawful communications)."
+},
+{
+"q": "How do I know this isn’t a scam?",
+"a": "You pay through Stripe (secure checkout). We never ask for passwords. For DNS changes, you can either (1) add me as a delegated DNS user, or (2) do a screenshare while you paste the records. After setup, you get proof screenshots + a short report showing SPF/DKIM/DMARC passing."
+},
+{
+"q": "Will you ask for passwords?",
+"a": "No. Please don’t send passwords. The safest options are delegated DNS access (add user) or screenshare while you add the DNS records. If you prefer, you can paste the DNS records yourself and We'll verify everything is passing."
 }
 ]
 },

@@ -192,6 +192,21 @@
         </div>
       `).join('');
     }
+
+    const homeFaqList = document.querySelector('.home-faq-list');
+    if (homeFaqList && data.faq && data.faq.items) {
+      homeFaqList.innerHTML = data.faq.items.map((item, index) => `
+        <details class="faq-item" id="home-faq-${index}">
+          <summary class="faq-question">
+            <span>${escapeHtml(item.q)}</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </summary>
+          <div class="faq-answer">
+            <p>${escapeHtml(item.a)}</p>
+          </div>
+        </details>
+      `).join('');
+    }
   }
 
   /**
@@ -244,6 +259,7 @@
           </ul>
           <div class="pricing-cta">
             <a href="${escapeHtml(tier.cta_href)}" class="btn btn-primary btn-lg">${escapeHtml(tier.cta_label)}</a>
+            <p class="stripe-note text-muted">Charged securely via Stripe. Your card details never touch this site.</p>
           </div>
         </div>
       `).join('');

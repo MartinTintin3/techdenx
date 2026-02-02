@@ -468,6 +468,12 @@ img {
   margin-top: 1.5rem;
 }
 
+.stripe-note {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
 .fine-print {
   margin-top: 2rem;
   padding: 1.5rem;
