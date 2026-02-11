@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('partials/head', { fullTitle, metaDescription, robots }) %>
+<%- await include('partials/head', { fullTitle, metaDescription, robots }) %>
 <body>
-  <%- include('partials/header', { nav, meta }) %>
+  <%- await include('partials/header', { nav, meta }) %>
 
   <main id="main">
     <section class="section">
@@ -31,7 +31,7 @@
     </section>
   </main>
 
-  <%- include('partials/footer', { nav, meta }) %>
+  <%- await include('partials/footer', { nav, meta }) %>
   <script src="/assets/site.js"></script>
 </body>
 </html>

@@ -62,6 +62,13 @@ function ensureDir(dirPath) {
   fs.mkdirSync(dirPath, { recursive: true });
 }
 
+function copyAssets() {
+  const sourceDir = path.join(root, 'assets');
+  const targetDir = path.join(distDir, 'assets');
+  ensureDir(targetDir);
+  fs.cpSync(sourceDir, targetDir, { recursive: true });
+}
+
 async function renderPage(template, locals, outputPath) {
   const templatePath = path.join(viewsDir, `${template}.ejs`);
   const html = await ejs.renderFile(templatePath, locals, { async: true });
@@ -71,6 +78,8 @@ async function renderPage(template, locals, outputPath) {
 
 async function build() {
   const data = processPlaceholders(readSiteData(), readSiteData().meta);
+
+  copyAssets();
 
   await renderPage('index', {
     fullTitle: buildTitle('', data.meta.title_suffix),
