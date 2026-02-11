@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head', { fullTitle, metaDescription, robots }) %>
+<body>
+  <%- include('partials/header', { nav, meta }) %>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="section-label">
+            <span class="section-dot" aria-hidden="true"></span>
+            <span class="section-label-text">Compliance Sprint</span>
+          </div>
+          <h1><%= home.hero_headline %></h1>
+          <p class="hero-subtitle"><%= home.hero_subheadline %></p>
+          <div class="cta-group">
+            <a href="<%= home.primary_cta_href %>" class="btn btn-primary btn-lg cta-primary"><%= home.primary_cta_label %></a>
+            <a href="/faq/" class="btn btn-secondary btn-lg">See FAQs</a>
+          </div>
+          <p class="stripe-note text-muted">Charged securely via Stripe. Your card details never touch this site.</p>
+          <div class="hero-micro">
+            <span class="hero-pill">48-hour turnaround</span>
+            <span class="hero-pill">Proof-first deliverables</span>
+            <span class="hero-pill">Zero inbox promises</span>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-ring"></div>
+          <div class="hero-orbit"></div>
+          <div class="hero-card hero-card-primary">
+            <div class="hero-card-label">SPF • DKIM • DMARC</div>
+            <div class="hero-card-metric">Pass in 48h</div>
+          </div>
+          <div class="hero-card hero-card-secondary">
+            <div class="hero-card-label">Evidence Pack</div>
+            <div class="hero-card-metric">Screenshots + Report</div>
+          </div>
+          <div class="hero-dot-grid"></div>
+          <div class="hero-accent-block"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">
+            <span class="section-dot" aria-hidden="true"></span>
+            <span class="section-label-text">Deliverables</span>
+          </div>
+          <h2>What you get</h2>
+          <p>Clear, objective verification you can save or share.</p>
+        </div>
+        <div class="home-sections">
+          <% home.sections.forEach(section => { %>
+            <div class="content-section">
+              <h2><%= section.title %></h2>
+              <ul>
+                <% section.bullets.forEach(item => { %>
+                  <li><%= item %></li>
+                <% }) %>
+              </ul>
+            </div>
+          <% }) %>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">
+            <span class="section-dot" aria-hidden="true"></span>
+            <span class="section-label-text">Clarity</span>
+          </div>
+          <h2>FAQ</h2>
+          <p>Quick answers before you buy.</p>
+        </div>
+        <div class="faq-list home-faq-list">
+          <% faq.items.forEach((item, index) => { %>
+            <details class="faq-item" id="home-faq-<%= index %>">
+              <summary class="faq-question">
+                <span><%= item.q %></span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </summary>
+              <div class="faq-answer">
+                <p><%= item.a %></p>
+              </div>
+            </details>
+          <% }) %>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-inverted">
+      <div class="container text-center">
+        <div class="section-label section-label-inverted">
+          <span class="section-dot" aria-hidden="true"></span>
+          <span class="section-label-text">Get moving</span>
+        </div>
+        <h2>Ready to get started?</h2>
+        <p class="text-muted mb-3">Pay now to begin your 48-hour sprint. We'll follow up with next steps.</p>
+        <div class="cta-group">
+          <a href="<%= home.primary_cta_href %>" class="btn btn-primary btn-lg cta-primary"><%= home.primary_cta_label %></a>
+        </div>
+        <p class="stripe-note text-muted">Charged securely via Stripe. Your card details never touch this site.</p>
+      </div>
+    </section>
+  </main>
+
+  <%- include('partials/footer', { nav, meta }) %>
+  <script src="/assets/site.js"></script>
+</body>
+</html>

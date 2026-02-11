@@ -1,0 +1,21 @@
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/" class="brand"><%= meta.brand_name %></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+      <ul class="nav-list">
+        <% nav.forEach(item => { %>
+          <li>
+            <a href="<%= item.href %>"<%= item.isCurrent ? ' aria-current="page"' : '' %>><%= item.label %></a>
+          </li>
+        <% }) %>
+      </ul>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head', { fullTitle, metaDescription, robots }) %>
+<body>
+  <%- include('partials/header', { nav, meta }) %>
+
+  <main id="main">
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">
+            <span class="section-dot" aria-hidden="true"></span>
+            <span class="section-label-text">Pricing</span>
+          </div>
+          <h1 class="page-headline"><%= pricing.headline %></h1>
+        </div>
+
+        <div class="pricing-tiers">
+          <% pricing.tiers.forEach(tier => { %>
+            <div class="pricing-card">
+              <h3><%= tier.name %></h3>
+              <div class="pricing-price"><%= tier.price %></div>
+              <p class="pricing-who"><%= tier.who_its_for %></p>
+              <ul class="pricing-features">
+                <% tier.includes.forEach(item => { %>
+                  <li><%= item %></li>
+                <% }) %>
+              </ul>
+              <div class="pricing-cta">
+                <a href="<%= tier.cta_href %>" class="btn btn-primary btn-lg"><%= tier.cta_label %></a>
+                <p class="stripe-note text-muted">Charged securely via Stripe. Your card details never touch this site.</p>
+              </div>
+            </div>
+          <% }) %>
+        </div>
+
+        <div class="fine-print">
+          <ul>
+            <% pricing.fine_print.forEach(item => { %>
+              <li><%= item %></li>
+            <% }) %>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <%- include('partials/footer', { nav, meta }) %>
+  <script src="/assets/site.js"></script>
+</body>
+</html>

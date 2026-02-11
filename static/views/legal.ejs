@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head', { fullTitle, metaDescription, robots }) %>
+<body>
+  <%- include('partials/header', { nav, meta }) %>
+
+  <main id="main">
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">
+            <span class="section-dot" aria-hidden="true"></span>
+            <span class="section-label-text">Legal</span>
+          </div>
+          <h1 class="page-headline"><%= page.headline %></h1>
+        </div>
+
+        <div class="legal-content">
+          <% page.sections.forEach(section => { %>
+            <section>
+              <h2><%= section.title %></h2>
+              <% if (section.paragraphs) { %>
+                <% section.paragraphs.forEach(p => { %>
+                  <p><%= p %></p>
+                <% }) %>
+              <% } %>
+            </section>
+          <% }) %>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <%- include('partials/footer', { nav, meta }) %>
+  <script src="/assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head', { fullTitle, metaDescription, robots }) %>
+<body>
+  <%- include('partials/header', { nav, meta }) %>
+
+  <main id="main">
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">
+            <span class="section-dot" aria-hidden="true"></span>
+            <span class="section-label-text">Contact</span>
+          </div>
+          <h1 class="page-headline"><%= contact.headline %></h1>
+        </div>
+
+        <div class="contact-intro">
+          <% if (contact.paragraphs) { %>
+            <% contact.paragraphs.forEach(p => { %>
+              <p><%= p %></p>
+            <% }) %>
+          <% } %>
+        </div>
+
+        <div class="contact-info">
+          <% contact.contact_blocks.forEach(block => { %>
+            <div class="contact-block">
+              <span class="contact-block-label"><%= block.label %></span>
+              <span class="contact-block-value">
+                <% if (block.label.toLowerCase() === 'email' && block.value.includes('@')) { %>
+                  <a href="mailto:<%= block.value %>"><%= block.value %></a>
+                <% } else { %>
+                  <%= block.value %>
+                <% } %>
+              </span>
+            </div>
+          <% }) %>
+        </div>
+
+        <div class="text-center mt-3">
+          <a href="<%= meta.stripe_payment_link_url %>" class="btn btn-primary btn-lg">Start the Sprint</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <%- include('partials/footer', { nav, meta }) %>
+  <script src="/assets/site.js"></script>
+</body>
+</html>

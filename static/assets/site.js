@@ -7,6 +7,70 @@
 (function () {
   'use strict';
 
+  function initMobileNav() {
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.main-nav');
+
+    if (toggle && nav) {
+      toggle.addEventListener('click', function () {
+        const isOpen = nav.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', isOpen);
+      });
+
+      document.addEventListener('click', function (e) {
+        if (!nav.contains(e.target) && !toggle.contains(e.target) && nav.classList.contains('is-open')) {
+          nav.classList.remove('is-open');
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+  }
+
+  function handleConfirmationParams() {
+    const referenceInfo = document.getElementById('reference-info');
+    const referenceText = document.getElementById('reference-text');
+    if (!referenceInfo || !referenceText) return;
+
+    const params = new URLSearchParams(window.location.search);
+    const parts = [];
+
+    const reference = params.get('session_id') || params.get('reference') || params.get('checkout_session_id');
+    if (reference) {
+      const safeRef = reference.substring(0, 64).replace(/[^a-zA-Z0-9_-]/g, '');
+      if (safeRef) {
+        parts.push(`Reference: ${safeRef}`);
+      }
+    }
+
+    const clientEmail = params.get('client_email');
+    if (clientEmail && clientEmail.includes('@') && clientEmail.length < 100) {
+      const clientEmailNotice = document.getElementById('client-email-notice');
+      if (clientEmailNotice) {
+        clientEmailNotice.style.display = 'block';
+        clientEmailNotice.textContent = `We'll send updates to: ${clientEmail}`;
+      }
+    }
+
+    if (parts.length > 0) {
+      referenceInfo.style.display = 'block';
+      referenceText.textContent = parts.join(' • ');
+    }
+  }
+
+  function init() {
+    initMobileNav();
+    handleConfirmationParams();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+
+  return;
+
+  // Legacy client-side rendering (disabled for SSR)
   // Cache for site copy data
   let siteData = null;
 

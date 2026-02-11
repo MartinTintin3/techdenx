@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head', { fullTitle, metaDescription, robots }) %>
+<body>
+  <%- include('partials/header', { nav, meta }) %>
+
+  <main id="main">
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">
+            <span class="section-dot" aria-hidden="true"></span>
+            <span class="section-label-text">Services</span>
+          </div>
+          <h1 class="page-headline"><%= services.headline %></h1>
+        </div>
+
+        <div class="services-sections">
+          <% services.sections.forEach(section => { %>
+            <div class="content-section">
+              <h2><%= section.title %></h2>
+              <% if (section.paragraphs) { %>
+                <% section.paragraphs.forEach(p => { %>
+                  <p><%= p %></p>
+                <% }) %>
+              <% } %>
+              <% if (section.bullets) { %>
+                <ul>
+                  <% section.bullets.forEach(item => { %>
+                    <li><%= item %></li>
+                  <% }) %>
+                </ul>
+              <% } %>
+            </div>
+          <% }) %>
+        </div>
+
+        <div class="notice-box notice-box-warning mt-3">
+          <strong>Important:</strong> We do not support spam or illicit email practices. We only work with legitimate senders using opt-in lists and lawful communications.
+        </div>
+
+        <div class="text-center mt-3">
+          <a href="/pricing/" class="btn btn-primary btn-lg">View Pricing</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <%- include('partials/footer', { nav, meta }) %>
+  <script src="/assets/site.js"></script>
+</body>
+</html>

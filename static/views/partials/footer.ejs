@@ -1,0 +1,33 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3><%= meta.brand_name %></h3>
+        <p>Located in <%= meta.location || 'Boston, MA' %></p>
+        <p><a href="mailto:<%= meta.contact_email %>"><%= meta.contact_email %></a></p>
+      </div>
+      <div class="footer-links">
+        <h4>Pages</h4>
+        <ul>
+          <% nav.forEach(item => { %>
+            <li><a href="<%= item.href %>"><%= item.label %></a></li>
+          <% }) %>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/privacy/">Privacy Policy</a></li>
+          <li><a href="/terms/">Terms of Service</a></li>
+          <li><a href="/refund/">Refund Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-notice">
+      <strong>Notice:</strong> We do not support spam or illicit email practices. We only work with legitimate senders.
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copyright">© <%= new Date().getFullYear() %> <%= meta.brand_name %>. All rights reserved.</p>
+    </div>
+  </div>
+</footer>

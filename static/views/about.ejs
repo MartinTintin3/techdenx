@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head', { fullTitle, metaDescription, robots }) %>
+<body>
+  <%- include('partials/header', { nav, meta }) %>
+
+  <main id="main">
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">
+            <span class="section-dot" aria-hidden="true"></span>
+            <span class="section-label-text">About</span>
+          </div>
+          <h1 class="page-headline"><%= about.headline %></h1>
+        </div>
+
+        <div class="about-content">
+          <% if (about.paragraphs) { %>
+            <% about.paragraphs.forEach(p => { %>
+              <p><%= p %></p>
+            <% }) %>
+          <% } %>
+          <% if (about.bullets) { %>
+            <ul>
+              <% about.bullets.forEach(item => { %>
+                <li><%= item %></li>
+              <% }) %>
+            </ul>
+          <% } %>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <%- include('partials/footer', { nav, meta }) %>
+  <script src="/assets/site.js"></script>
+</body>
+</html>
