@@ -68,13 +68,14 @@ async function createApp() {
   app.set('views', path.join(root, 'views'));
   app.set('view engine', 'ejs');
 
+  let vite;
+
   if (!isProd) {
-    const vite = await createViteServer({
+    vite = await createViteServer({
       root,
       server: { middlewareMode: true },
       appType: 'custom'
     });
-    app.use(vite.middlewares);
   }
 
   if (isProd) {
@@ -202,6 +203,10 @@ async function createApp() {
       nav: buildNav(data, req.path)
     });
   });
+
+  if (vite) {
+    app.use(vite.middlewares);
+  }
 
   app.use((req, res) => {
     res.status(404).send('Not Found');
